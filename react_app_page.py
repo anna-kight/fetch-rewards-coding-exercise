@@ -57,3 +57,12 @@ def fill_bowl_grid_box(driver, grid, box_number, bar_number):
 
     cell = driver.find_element_by_id('{}_{}'.format(grid, box_number))
     cell.send_keys(bar_number)
+
+
+def get_list_of_weighings(driver):
+    ''' Gets the list of weighings'''
+
+    ol = driver.find_element_by_css_selector('#root > div > div.game > div.game-info > ol')
+    weighings = ol.get_property('innerText')
+    
+    return weighings
