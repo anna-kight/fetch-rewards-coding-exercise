@@ -66,3 +66,14 @@ def get_list_of_weighings(driver):
     weighings = ol.get_property('innerText')
     
     return weighings
+
+
+def click_gold_bar_number_and_get_message(driver, bar_number):
+    ''' Clicks the gold bar number at the bottom of the website and returns the alert message '''
+
+    bar = driver.find_element_by_id('coin_{}'.format(bar_number))
+    bar.click()
+
+    message = driver.switch_to.alert.text
+
+    return message
