@@ -28,13 +28,13 @@ def open_page():
 
 def click_weigh_button(driver):
     """ Clicks the weigh button """
-    original_number_of_weighings = len(get_list_of_weighings(driver))
+    original_length_of_weighings = len(get_list_of_weighings(driver))
 
     button = driver.find_element_by_id("weigh")
     button.click()
 
     WebDriverWait(driver, 10).until(
-        lambda driver: len(get_list_of_weighings(driver)) > original_number_of_weighings
+        lambda driver: len(get_list_of_weighings(driver)) > original_length_of_weighings
     )
 
 

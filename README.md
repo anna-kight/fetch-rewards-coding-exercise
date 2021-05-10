@@ -1,4 +1,8 @@
-Set up:
+# Fetch Rewards Coding Excercise - SDET
+
+This is a selenium based project using python to preform required tasks and scenario for the Fetch Rewards Coding Excercise.  
+
+## Set up:
 
 Install requirements 
     Python3
