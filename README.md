@@ -15,11 +15,12 @@ Create and activate a python virtual environment to run the test in
 python3 -m venv env
 source env/bin/
 ```
+Note: if you are not using a virtual environment you will have to use python3 and pip3 commands rather than python and pip in later steps.
 
 ### Install necessary packages:
 To install necessary python packages run the following from the command line
 ```bash
-pip3 install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 ### Download the approprate chromedriver:
@@ -30,7 +31,7 @@ If you are not usng version 90 of chrome you will need to replace the chromedriv
 ## Running the test:
 To run the test from the command line run 
 ```bash
-python3 -m pytest -s test_find_the_fake.py
+python -m pytest -s test_find_the_fake.py
 ```
 
 When the test is finished you can deactivate your virtual environment by running 
