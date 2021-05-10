@@ -108,10 +108,8 @@ def test_find_the_fake_01():
         allert_message, react_app_page.ALLERT_MESSAGE_RIGHT
     )
 
-    
-
     final_list_of_weighings = react_app_page.get_list_of_weighings(driver)
-    number_of_weighings = int(final_list_of_weighings.count('[')/2)
+    number_of_weighings = int(final_list_of_weighings.count("[") / 2)
 
     # Print desired output
     print("Alert message: {}".format(allert_message))
