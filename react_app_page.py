@@ -11,8 +11,8 @@ ALLERT_MESSAGE_RIGHT = "Yay! You find it!"
 ALLERT_MESSAGE_WRONG = "Oops! Try Again!"
 
 # bowls
-LEFT = 'left'
-RIGHT = 'right'
+LEFT = "left"
+RIGHT = "right"
 
 
 def open_page():
@@ -33,7 +33,9 @@ def click_weigh_button(driver):
     button = driver.find_element_by_id("weigh")
     button.click()
 
-    WebDriverWait(driver, 10).until(lambda driver: len(get_list_of_weighings(driver)) > original_number_of_weighings)
+    WebDriverWait(driver, 10).until(
+        lambda driver: len(get_list_of_weighings(driver)) > original_number_of_weighings
+    )
 
 
 def click_reset_button(driver):
@@ -72,8 +74,9 @@ def fill_cell_in_grid_box(driver, bowl, box_number, bar_number):
     cell = driver.find_element_by_id("{}_{}".format(bowl, box_number))
     cell.send_keys(bar_number)
 
-    WebDriverWait(driver, 10).until(lambda driver: cell.get_attribute("value") == str(bar_number))
-
+    WebDriverWait(driver, 10).until(
+        lambda driver: cell.get_attribute("value") == str(bar_number)
+    )
 
 
 def fill_bowl(driver, bowl, list_of_boxes_and_bars):
@@ -136,4 +139,3 @@ def verify_alert_message(expected_alert, actual_alert):
 
     else:
         return ALLERT_MESSAGE_WRONG == actual_alert
-        
