@@ -110,12 +110,16 @@ def get_list_of_weighings(driver):
 
 
 def click_gold_bar_number_and_get_message(driver, bar_number):
-    """ Clicks the gold bar number at the bottom of the website and returns the alert message """
+    """ Clicks the gold bar number at the bottom of the website, accepts the allert and returns the alert message """
 
     bar = driver.find_element_by_id("coin_{}".format(bar_number))
     bar.click()
 
-    message = driver.switch_to.alert.text
+    alert = driver.switch_to.alert
+
+    message = alert.text
+
+    alert.accept()
 
     return message
 
