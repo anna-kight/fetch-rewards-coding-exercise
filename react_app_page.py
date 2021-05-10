@@ -42,7 +42,7 @@ def get_measure_results(driver):
 
 def fill_bowl_grid_box(driver, grid, box_number, bar_number):
     ''' 
-        Puts the value of 'bar_number' into 'box_number' on 'gird'
+        Enters the value of 'bar_number' into 'box_number' on 'gird'
         
         Parameters:
             grid : str 
@@ -77,3 +77,18 @@ def click_gold_bar_number_and_get_message(driver, bar_number):
     message = driver.switch_to.alert.text
 
     return message
+
+def verify_alert_message(expected_alert, actual_alert)
+    ''' 
+        Verifies that the allert text is the expected text 
+            Parameters:
+                expected_alert : bool
+                    the expected allert response true if the user has correctly identified the fake bar false if the user has not
+                acutal_alert : str
+                    the actual allert message text
+            Return: 
+                The return value. True for allert is as expected, False otherwise.
+                                        
+    '''
+
+    return false 
